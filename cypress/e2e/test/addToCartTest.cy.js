@@ -9,14 +9,10 @@ describe('test automation', ()=>{
     })
 
     it('Add to cart flow',  () => {
-       // await new Promise(resolve => setTimeout(resolve, 2000))
         homePageObj.searchProduct(testData.product.productName)
-       // await new Promise(resolve => setTimeout(resolve, 4000))
         homePageObj.verifyProductAvailability()
         homePageObj.addToCart()
-       // await new Promise(resolve => setTimeout(resolve, 4000))
-        
-        homePageObj.verify().should('contain', "Success: You have added MacBook to your shopping cart!", {timtimeout: 10000});
+        homePageObj.verify().should('contain', testData.message.successMessage, {timtimeout: 10000}).and('contain', testData.product.productName);
         //.should('contain', testData.product.productName)
     });
 })

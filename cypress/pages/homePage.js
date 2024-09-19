@@ -15,7 +15,6 @@ verifyProductAvailability(){
     cy.get(this.webLocators.addtocart).first().should('be.visible')
 }
 addToCart(){
-   // cy.get(this.webLocators.addtocart).first().click()
     cy.get(this.webLocators.addtocart).first().click()
 }
 verify() {
