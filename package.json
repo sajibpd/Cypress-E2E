@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test:addToCart": "npx cypress run --spec cypress/e2e/test/addToCartTest.cy.js",
+    "test:register": "npx cypress run --spec cypress/e2e/test/registerTest.cy.js",
+    "test:all": "npx cypress run --spec cypress/e2e/test/registerTest.cy.js && npx cypress run --spec cypress/e2e/test/addToCartTest.cy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^13.14.2"
+    "cypress": "^13.14.2",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

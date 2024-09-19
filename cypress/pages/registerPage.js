@@ -10,6 +10,7 @@ export class registerPage{
         policyCheckBox: 'input[type="checkbox"]',
         continue: '.btn.btn-primary'
     }
+    
      
     openURL(){
         cy.visit(Cypress.env('URL'))
